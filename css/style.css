@@ -169,8 +169,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
   align-items: center;
   min-height: 72vh;
 }
@@ -288,23 +288,24 @@ p {
 .hero__media {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem 0;
 }
 
 .portrait-frame {
-  width: min(360px, 82vw);
+  width: min(300px, 82vw);
   border-radius: 2rem;
   background: linear-gradient(135deg, rgba(99, 208, 207, 0.18), rgba(245,185,75,0.18));
   border: 1px solid rgba(13, 141, 142, 0.2);
   box-shadow: 0 20px 40px var(--shadow);
   overflow: hidden;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .portrait-frame img {
   width: 100%;
   height: auto;
-  max-height: 430px;
+  max-height: 360px;
   object-fit: contain;
   filter: drop-shadow(0 16px 24px rgba(15, 66, 96, 0.12));
 }
@@ -601,7 +602,7 @@ input.invalid, textarea.invalid {
   }
 
   .portrait-frame {
-    width: min(300px, 80vw);
+    width: min(260px, 75vw);
   }
 }
 
