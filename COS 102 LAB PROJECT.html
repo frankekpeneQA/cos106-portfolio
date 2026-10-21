@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.[cite: 6]">
+<title>Contact | Frank Ekpene[cite: 6]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content[cite: 6]</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html">Frank Ekpene[cite: 6]</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu[cite: 6]</button>
+<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home[cite: 6]</a></li><li><a href="about.html">About Me[cite: 6]</a></li><li><a href="projects.html">Projects[cite: 6]</a></li><li><a href="planner.html">Academic Planner[cite: 6]</a></li><li><a href="contact.html" aria-current="page">Contact[cite: 6]</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<h1>Contact me[cite: 6]</h1>
+
+<!-- Contact Details with Image Arranged in a Straight Line & Colored Accent -->
+<section class="panel contact-intro-panel">
+<h2>Get in touch[cite: 6]</h2>
+<p class="contact-subtitle">I'm currently a Software Engineering student at MIVA Open University[cite: 5]. Reach out through any of the channels below or send a message directly!</p>
+<div class="contact-row-layout">
+<img src="profile.jpg" alt="Portrait of Frank Ekpene[cite: 7]" class="contact-profile-img" width="130" height="130">
+<ul class="contact-list">
+<li><span class="lbl">Name:</span><span>FRANK EKPENE[cite: 6]</span></li>
+<li><span class="lbl">Department:</span><span>Software Engineering (MIVA)[cite: 5]</span></li>
+<li><span class="lbl">Email:</span><a href="mailto:f.ekpene6743@miva.edu.ng">f.ekpene6743@miva.edu.ng[cite: 6]</a></li>
+<li><span class="lbl">Phone:</span><a href="tel:+2348169149686">08169149686[cite: 6]</a></li>
+</ul>
+</div>
+</section>
+
+<!-- Organized Message Form -->
+<section class="panel message-panel">
+<h2>Send me a message[cite: 6]</h2>
+<p class="muted">Fill in the form and press send. Your email app will open with the message ready to go[cite: 6].</p>
+<form id="contactForm" novalidate>
+<div class="field"><label for="name">Your name[cite: 6]</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name[cite: 6]"><span class="error" id="nameError"></span></div>
+<div class="field"><label for="email">Your email address[cite: 6]</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com[cite: 6]"><span class="error" id="emailError"></span></div>
+<div class="field"><label for="phone">Your phone number[cite: 6]</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="Digits only, e.g. 08012345678[cite: 6]"><span class="error" id="phoneError"></span></div>
+<div class="field"><label for="message">Message[cite: 6]</label><textarea id="message" name="message" rows="6" maxlength="500" placeholder="Write your message here[cite: 6]"></textarea><span class="counter" id="msgCount">0 / 500[cite: 6]</span><span class="error" id="messageError"></span></div>
+<button class="btn send" type="submit">Send message[cite: 6]</button>
+<p id="formStatus" class="success" role="status"></p>
+</form>
+</section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project[cite: 6].</p></footer>
+<script src="main.js"></script>
+</body>
+</html>
