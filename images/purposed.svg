@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Purposed project illustration</title>
+  <desc id="desc">A planning board with tasks grouped around a central mission.</desc>
+  <rect width="800" height="450" rx="26" fill="#f7fafc"/>
+  <circle cx="400" cy="220" r="120" fill="#dff3f2"/>
+  <rect x="120" y="120" width="150" height="90" rx="16" fill="#ffffff" stroke="#d6dee8"/>
+  <rect x="530" y="120" width="150" height="90" rx="16" fill="#ffffff" stroke="#d6dee8"/>
+  <rect x="190" y="260" width="150" height="90" rx="16" fill="#ffffff" stroke="#d6dee8"/>
+  <rect x="460" y="260" width="150" height="90" rx="16" fill="#ffffff" stroke="#d6dee8"/>
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#12263a">Purpose</text>
+  <text x="400" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4b6178">Break it down</text>
+  <path d="M270 175h95M435 175h95M270 305h95M435 305h95" stroke="#0f8b8d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="400" cy="220" r="18" fill="#0f8b8d"/>
+</svg>

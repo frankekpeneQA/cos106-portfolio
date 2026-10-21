@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Education project illustration</title>
+  <desc id="desc">A stylized study dashboard with cards, books, and notes.</desc>
+  <rect width="800" height="450" rx="26" fill="#f6fafb"/>
+  <rect x="60" y="70" width="680" height="300" rx="24" fill="#edf7f9"/>
+  <rect x="90" y="100" width="210" height="110" rx="18" fill="#ffffff"/>
+  <rect x="330" y="100" width="210" height="110" rx="18" fill="#ffffff"/>
+  <rect x="570" y="100" width="120" height="110" rx="18" fill="#0f8b8d"/>
+  <rect x="90" y="240" width="600" height="90" rx="18" fill="#ffffff"/>
+  <rect x="110" y="120" width="80" height="70" rx="8" fill="#e9a23b" opacity="0.3"/>
+  <rect x="350" y="120" width="120" height="18" rx="9" fill="#d7e7eb"/>
+  <rect x="350" y="152" width="150" height="18" rx="9" fill="#d7e7eb"/>
+  <rect x="110" y="260" width="480" height="16" rx="8" fill="#d7e7eb"/>
+  <rect x="110" y="290" width="360" height="16" rx="8" fill="#d7e7eb"/>
+  <circle cx="635" cy="155" r="26" fill="#ffffff" opacity="0.8"/>
+  <path d="M620 155l10 10 22-28" stroke="#0f8b8d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
