@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
+<title>Contact | Frank Ekpene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html">Frank Ekpene</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html">Academic Planner</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<h1>Contact me</h1>
+<section class="panel">
+<form id="contactForm" novalidate>
+<div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name"><span class="error" id="nameError"></span></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email"><span class="error" id="emailError"></span></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"><span class="error" id="phoneError"></span></div>
+<div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea><span class="error" id="messageError"></span></div>
+<button class="btn" type="submit">Send message</button>
+<p id="formStatus" class="success" role="status"></p>
+</form>
+</section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
