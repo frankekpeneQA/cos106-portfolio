@@ -42,21 +42,118 @@
       <section class="section-heading">
         <p class="eyebrow">Academic tool</p>
         <h1>Study planner</h1>
+        <p class="lead">Plan lectures, lab work, assignments, and revision so your semester stays organised and realistic.</p>
       </section>
 
-      <section class="panel planner-panel">
-        <form id="taskForm" novalidate>
-          <label for="taskInput">Add a new task</label>
-          <div class="row">
-            <input id="taskInput" type="text" placeholder="Example: Review software testing notes" autocomplete="off" />
-            <button class="btn btn-primary" type="submit">Add task</button>
-          </div>
-          <p class="error" id="taskError" role="alert" aria-live="assertive"></p>
-        </form>
+      <section class="planner-summary" aria-label="Planner summary">
+        <article class="stat-card">
+          <span>Total tasks</span>
+          <strong id="totalTasks">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Remaining</span>
+          <strong id="remainingTasks">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Due soon</span>
+          <strong id="dueSoonTasks">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Completion</span>
+          <strong id="completionRate">0%</strong>
+        </article>
+      </section>
 
-        <p id="count" aria-live="polite"></p>
-        <ul id="taskList" class="task-list" aria-live="polite"></ul>
-        <p id="empty" class="muted">No tasks yet. Add your first study goal above.</p>
+      <section class="planner-layout">
+        <div class="panel planner-main">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Task dashboard</p>
+              <h2>Add a new study task</h2>
+            </div>
+            <button type="button" id="clearCompleted" class="btn btn-secondary btn-small">Clear completed</button>
+          </div>
+
+          <form id="plannerForm" class="planner-form" novalidate>
+            <div class="field-row">
+              <label>
+                Task title
+                <input id="taskTitle" name="taskTitle" type="text" maxlength="100" placeholder="Example: Review JavaScript notes" autocomplete="off" />
+              </label>
+
+              <label>
+                Priority
+                <select id="taskPriority" name="taskPriority">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label>
+                Category
+                <select id="taskCategory" name="taskCategory">
+                  <option value="Assignment">Assignment</option>
+                  <option value="Revision">Revision</option>
+                  <option value="Project">Project</option>
+                  <option value="Lecture">Lecture</option>
+                  <option value="Lab">Lab</option>
+                  <option value="Meeting">Meeting</option>
+                </select>
+              </label>
+
+              <label>
+                Due date
+                <input id="taskDueDate" name="taskDueDate" type="date" />
+              </label>
+            </div>
+
+            <label>
+              Notes
+              <textarea id="taskNotes" name="taskNotes" rows="3" placeholder="Add a quick reminder, study goal, or checklist note..."></textarea>
+            </label>
+
+            <div class="planner-form__actions">
+              <button class="btn btn-primary" type="submit">Add task</button>
+              <p class="error" id="plannerError" role="alert" aria-live="assertive"></p>
+            </div>
+          </form>
+
+          <div class="planner-toolbar" aria-label="Task filters">
+            <div class="filter-group" role="group" aria-label="Filter tasks">
+              <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+              <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+              <button type="button" class="filter-btn" data-filter="high">High priority</button>
+              <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+          </div>
+
+          <ul id="plannerList" class="planner-list" aria-live="polite"></ul>
+          <p id="plannerEmpty" class="muted">No tasks in this view yet. Add your first study task above.</p>
+        </div>
+
+        <aside class="panel planner-side">
+          <div class="panel-header panel-header--stacked">
+            <div>
+              <p class="eyebrow">This week</p>
+              <h2>Focus plan</h2>
+            </div>
+          </div>
+
+          <ul class="focus-list">
+            <li>Finish urgent coursework before deadlines.</li>
+            <li>Reserve one block for revision and one for project work.</li>
+            <li>Review notes immediately after lectures.</li>
+            <li>Track weekly wins to keep momentum steady.</li>
+          </ul>
+
+          <div class="mini-panel">
+            <p class="mini-label">Semester reminder</p>
+            <p>Use this planner to stay consistent: small daily tasks add up to major progress.</p>
+          </div>
+        </aside>
       </section>
     </main>
 
@@ -69,4 +166,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-
