@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
+<title>Contact | Frank Ekpene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="bar">
+<a class="brand" href="index.html">Frank Ekpene</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html">Academic Planner</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<h1>Contact me</h1>
+
+<!-- Contact Details with Image Arranged in a Straight Line + Color Accent -->
+<section class="panel contact-intro-panel">
+<h2>Get in touch</h2>
+<div class="contact-row-layout">
+<img src="profile.jpg" alt="Portrait of Frank Ekpene" class="contact-profile-img" width="120" height="120">
+<ul class="contact-list">
+<li><span class="lbl">Name</span><span>FRANK EKPENE</span></li>
+<li><span class="lbl">Email</span><a href="mailto:f.ekpene6743@miva.edu.ng">f.ekpene6743@miva.edu.ng</a></li>
+<li><span class="lbl">Phone</span><a href="tel:+2348169149686">08169149686</a></li>
+</ul>
+</div>
+</section>
+
+<!-- Nicely Organized Message Form -->
+<section class="panel message-panel">
+<h2>Send me a message</h2>
+<p class="muted">Fill in the form and press send. Your email app will open with the message ready to go.</p>
+<form id="contactForm" novalidate>
+<div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name"><span class="error" id="nameError"></span></div>
+<div class="field"><label for="email">Your email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"><span class="error" id="emailError"></span></div>
+<div class="field"><label for="phone">Your phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="Digits only, e.g. 08012345678"><span class="error" id="phoneError"></span></div>
+<div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="6" maxlength="500" placeholder="Write your message here"></textarea><span class="counter" id="msgCount">0 / 500</span><span class="error" id="messageError"></span></div>
+<button class="btn send" type="submit">Send message</button>
+<p id="formStatus" class="success" role="status"></p>
+</form>
+</section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
+<script src="main.js"></script>
+</body>
+</html>
