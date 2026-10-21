@@ -1,53 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
-<title>Projects | Frank Ekpene</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="bar">
-<a class="brand" href="index.html">Frank Ekpene</a>
-<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html" aria-current="page">Projects</a></li><li><a href="planner.html">Academic Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-</div>
-</header>
-<main id="main">
-<h1>Projects</h1>
-<div class="grid"><article class="card">
-<img src="images/determination.svg" alt="Screenshot of the Determination project" width="480" height="270" loading="lazy">
-<div class="card-body">
-<h2>Determination</h2>
-<p>A goal tracker that shows daily progress toward a target and keeps the next step in view.</p>
-<p class="tags">HTML, CSS, JavaScript</p>
-<p><a class="btn small" href="#">View project</a></p>
-</div>
-</article><article class="card">
-<img src="images/education.svg" alt="Screenshot of the Education project" width="480" height="270" loading="lazy">
-<div class="card-body">
-<h2>Education</h2>
-<p>A learning hub that organizes study resources by course so notes and links stay in one place.</p>
-<p class="tags">HTML, CSS</p>
-<p><a class="btn small" href="#">View project</a></p>
-</div>
-</article><article class="card">
-<img src="images/purposed.svg" alt="Screenshot of the Purposed project" width="480" height="270" loading="lazy">
-<div class="card-body">
-<h2>Purposed</h2>
-<p>A planning page for writing down a purpose and breaking it into small, checkable actions.</p>
-<p class="tags">HTML, CSS, JavaScript</p>
-<p><a class="btn small" href="#">View project</a></p>
-</div>
-</article></div>
-</main>
-<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Featured projects from Frank Ekpene, including personal profile, academic journey, and professional goals." />
+    <meta name="keywords" content="Frank Ekpene projects, portfolio projects, academic journey, career goals" />
+    <title>Projects | Frank Ekpene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Frank Ekpene</a>
+
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          Menu
+        </button>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="container page-shell">
+      <section class="section-heading projects-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Featured profile and goals</h1>
+      </section>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="images/profile.svg" alt="Profile overview illustration" width="640" height="360" />
+          <div class="project-card__body">
+            <p class="project-tag">Profile</p>
+            <h2>My profile</h2>
+            <p>Learn more about my academic path, interests, and direction as a software engineering student.</p>
+            <a class="btn btn-primary btn-small" href="projects/profile.html">Read more</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/education.svg" alt="Academic journey illustration" width="640" height="360" />
+          <div class="project-card__body">
+            <p class="project-tag">Academic journey</p>
+            <h2>Education and growth</h2>
+            <p>Explore my learning path, software engineering interests, and the values that guide my progress.</p>
+            <a class="btn btn-primary btn-small" href="projects/academic-journey.html">Read more</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/purposed.svg" alt="Career goals illustration" width="640" height="360" />
+          <div class="project-card__body">
+            <p class="project-tag">Career focus</p>
+            <h2>Career goals</h2>
+            <p>See how I am preparing for a future in software quality assurance, problem solving, and digital product improvement.</p>
+            <a class="btn btn-primary btn-small" href="projects/career-goals.html">Read more</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
+

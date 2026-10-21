@@ -1,64 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
-<title>About Me | Frank Ekpene</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="bar">
-<a class="brand" href="index.html">Frank Ekpene</a>
-<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html">Academic Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-</div>
-</header>
-<main id="main">
-<h1>About me</h1>
-<section class="panel">
-<h2>Educational background</h2>
-<table>
-<caption>My education</caption>
-<thead><tr><th scope="col">Institution</th><th scope="col">Department</th><th scope="col">Status</th></tr></thead>
-<tbody><tr><td>Miva Open University</td><td>Software Engineering</td><td>Current student</td></tr></tbody>
-</table>
-</section>
-<section class="panel">
-<h2>Career aspirations</h2>
-<p>I want to work in software quality assurance, where careful testing protects users and helps teams ship with confidence.</p>
-</section>
-<section class="panel two">
-<div>
-<h2>Technical skills</h2>
-<ul>
-<li>Quality Assurance</li>
-<li>HTML and CSS</li>
-<li>JavaScript basics</li>
-<li>Git and GitHub</li>
-</ul>
-</div>
-<div>
-<h2>Hobbies and interests</h2>
-<ul>
-<li>Learning new technology</li>
-<li>Reading</li>
-<li>Problem solving</li>
-</ul>
-</div>
-</section>
-<section class="panel">
-<h2>Say hello</h2>
-<p>Press play to hear a short welcome tone.</p>
-<audio controls preload="none"><source src="welcome.wav" type="audio/wav">Your browser does not support audio playback.</audio>
-</section>
-</main>
-<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn more about Frank Ekpene, a software engineering student focused on QA, frontend development, and academic growth." />
+    <meta name="keywords" content="Frank Ekpene, about me, software engineering student, QA, portfolio" />
+    <title>About | Frank Ekpene</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Frank Ekpene</a>
+
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          Menu
+        </button>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="container page-shell">
+      <section class="profile-header">
+        <div class="profile-header__image">
+          <img src="images/profile.svg" alt="Frank Ekpene portrait" width="420" height="420" />
+        </div>
+
+        <div class="profile-header__content">
+          <p class="eyebrow">Profile</p>
+          <h1>About Frank Ekpene</h1>
+          <p>
+            I am a software engineering student at Miva Open University, and my focus is on building meaningful digital
+            solutions while strengthening the quality of the software I create and use.
+          </p>
+          <p>
+            I enjoy learning about technology, testing software critically, and improving systems to make them more
+            reliable, useful, and user-friendly. I am especially passionate about software quality assurance and the art of spotting issues before users do.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Education</h2>
+        <table>
+          <caption>Academic background</caption>
+          <thead>
+            <tr>
+              <th scope="col">Institution</th>
+              <th scope="col">Department</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Miva Open University</td>
+              <td>Software Engineering</td>
+              <td>Current student</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel two-column">
+        <div>
+          <h2>Technical skills</h2>
+          <ul class="detail-list">
+            <li>Quality assurance and validation</li>
+            <li>HTML and semantic web structure</li>
+            <li>CSS styling and responsive design</li>
+            <li>JavaScript and front-end interactions</li>
+            <li>GitHub and version control</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Interests</h2>
+          <ul class="detail-list">
+            <li>Learning new technology</li>
+            <li>Reading and research</li>
+            <li>Problem solving</li>
+            <li>Career growth in software development</li>
+            <li>Improving user experience</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Career goals</h2>
+        <p>
+          My goal is to build a career in software quality assurance and digital product improvement. I want to help teams ship products that are accurate, reliable, and trusted by users.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
+

@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
-<title>Academic Planner | Frank Ekpene</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="bar">
-<a class="brand" href="index.html">Frank Ekpene</a>
-<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html" aria-current="page">Academic Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-</div>
-</header>
-<main id="main">
-<h1>Academic planner</h1>
-<section class="panel">
-<form id="taskForm" novalidate>
-<label for="taskInput">New task</label>
-<div class="row">
-<input id="taskInput" type="text" placeholder="For example: Read chapter 3" autocomplete="off">
-<button class="btn" type="submit">Add task</button>
-</div>
-<p class="error" id="taskError" role="alert"></p>
-</form>
-<p id="count" aria-live="polite"></p>
-<ul id="taskList" class="tasks"></ul>
-<p id="empty" class="muted">No tasks yet. Add your first one above.</p>
-</section>
-</main>
-<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Academic planner for Frank Ekpene to manage study tasks and goals." />
+    <meta name="keywords" content="Frank Ekpene planner, academic task tracker, study planner" />
+    <title>Academic Planner | Frank Ekpene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Frank Ekpene</a>
+
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          Menu
+        </button>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html" aria-current="page">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="container page-shell">
+      <section class="section-heading">
+        <p class="eyebrow">Academic tool</p>
+        <h1>Study planner</h1>
+      </section>
+
+      <section class="panel planner-panel">
+        <form id="taskForm" novalidate>
+          <label for="taskInput">Add a new task</label>
+          <div class="row">
+            <input id="taskInput" type="text" placeholder="Example: Review software testing notes" autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Add task</button>
+          </div>
+          <p class="error" id="taskError" role="alert" aria-live="assertive"></p>
+        </form>
+
+        <p id="count" aria-live="polite"></p>
+        <ul id="taskList" class="task-list" aria-live="polite"></ul>
+        <p id="empty" class="muted">No tasks yet. Add your first study goal above.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
+

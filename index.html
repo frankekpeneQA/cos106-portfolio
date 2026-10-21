@@ -1,50 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Frank Ekpene - student portfolio and academic planner, MIVA Open University.">
-<title>Home | Frank Ekpene</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="bar">
-<a class="brand" href="index.html">Frank Ekpene</a>
-<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html">Academic Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-</div>
-</header>
-<main id="main">
-<section class="hero">
-<div class="hero-text">
-<p class="kicker">Student portfolio</p>
-<h1>Hi, I'm Frank Ekpene.</h1>
-<p class="lead">Welcome to my site. I'm learning to build software that works the way people expect it to, and this is where I keep my profile, my projects, and my study plan.</p>
-<p class="cta"><a class="btn" href="projects.html">See my projects</a> <a class="btn ghost" href="contact.html">Contact me</a></p>
-</div>
-<img class="portrait" src="images/profile.svg" alt="Portrait of Frank Ekpene" width="320" height="320">
-</section>
-<section class="panel">
-<h2>Brief biography</h2>
-<p>I am a student of Miva Open University in the Department of Software Engineering. My main skill area is Quality Assurance: checking that software does what it should and finding problems before users do.</p>
-<p>This website is my COS 106 term project. It includes my profile, three projects, and an academic planner I built with JavaScript.</p>
-</section>
-<section class="panel">
-<h2>Explore the site</h2>
-<ul class="links">
-<li><a href="about.html">About me</a>: education, skills, and goals</li>
-<li><a href="projects.html">Projects</a>: Determination, Education, and Purposed</li>
-<li><a href="planner.html">Academic planner</a>: add, complete, and delete study tasks</li>
-<li><a href="contact.html">Contact</a>: send me a message</li>
-</ul>
-</section>
-</main>
-<footer class="site-footer"><p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering. COS 106 term project.</p></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frank Ekpene is a software engineering student focused on quality assurance, web development, and academic growth." />
+    <meta name="keywords" content="Frank Ekpene, software engineering student, QA, web developer, MIVA Open University, portfolio" />
+    <meta name="author" content="Frank Ekpene" />
+    <meta property="og:title" content="Frank Ekpene | Portfolio" />
+    <meta property="og:description" content="Portfolio website for COS106 coursework, projects, and academic progress." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/profile.svg" />
+    <title>Frank Ekpene | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Frank Ekpene home">Frank Ekpene</a>
+
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          Menu
+        </button>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero container">
+        <div class="hero__content">
+          <p class="eyebrow">Student Portfolio</p>
+          <h1>Building thoughtful digital experiences with purpose.</h1>
+          <p class="lead">
+            I’m Frank Ekpene, a software engineering student with a passion for quality assurance,
+            problem-solving, and building tools that help people work smarter and learn better.
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="projects.html">View my work</a>
+            <a class="btn btn-secondary" href="contact.html">Contact me</a>
+          </div>
+
+          <ul class="hero-stats" aria-label="Quick profile summary">
+            <li><strong>3+</strong><span>Portfolio highlights</span></li>
+            <li><strong>QA</strong><span>Core focus</span></li>
+            <li><strong>HTML/CSS/JS</strong><span>Skill stack</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="portrait-frame">
+            <img src="images/profile.svg" alt="Frank Ekpene profile portrait" width="520" height="520" />
+          </div>
+        </div>
+      </section>
+
+      <section class="container section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>Who I am</h2>
+        </div>
+
+        <div class="about-preview">
+          <div class="about-preview__card">
+            <h3>My mission</h3>
+            <p>
+              I want to create software that not only works well, but also makes people’s lives easier,
+              safer, and more productive.
+            </p>
+          </div>
+
+          <div class="about-preview__card">
+            <h3>My focus</h3>
+            <p>
+              My strongest interest is in software quality assurance, testing, and making sure products meet
+              user expectations before release.
+            </p>
+          </div>
+
+          <div class="about-preview__card">
+            <h3>My approach</h3>
+            <p>
+              I combine critical thinking, learning agility, and simple design principles to solve real-world
+              problems creatively.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section-block">
+        <div class="section-heading">
+          <p class="eyebrow">What I work with</p>
+          <h2>Skills and strengths</h2>
+        </div>
+
+        <div class="chip-grid" aria-label="Skills and strengths">
+          <span class="chip">Quality Assurance</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Academic Planning</span>
+          <span class="chip">User Experience</span>
+        </div>
+      </section>
+
+      <section class="container section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Academic focus</p>
+          <h2>My learning journey</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Academic Growth</h3>
+            <p>I study software engineering at Miva Open University and continue learning through real projects and hands-on practice.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Career Direction</h3>
+            <p>I aim to build a career in quality assurance and product reliability, with a long-term interest in software that users trust.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Personal Values</h3>
+            <p>I care about discipline, consistency, clarity, and helping teams create products that are more dependable and user-friendly.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Frank Ekpene. MIVA Open University, Software Engineering.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
+

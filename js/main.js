@@ -1,114 +1,195 @@
 "use strict";
-// ---- Navigation toggle (mobile) ----
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
-menuBtn.addEventListener("click", function () {
-  const open = nav.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", String(open));
-});
 
-// ---- Academic planner ----
+const root = document.body;
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("main-nav");
+const themeToggle = document.getElementById("themeToggle");
+
+if (menuBtn && nav) {
+  menuBtn.addEventListener("click", function () {
+    const isOpen = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  if (themeToggle) {
+    const icon = themeToggle.querySelector(".theme-toggle__icon");
+    if (icon) {
+      icon.textContent = theme === "dark" ? "☀️" : "🌙";
+    }
+  }
+  localStorage.setItem("portfolio-theme", theme);
+}
+
+const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+applyTheme(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", function () {
+    const current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(current);
+  });
+}
+
 const taskForm = document.getElementById("taskForm");
 if (taskForm) {
-  const input = document.getElementById("taskInput");
-  const list = document.getElementById("taskList");
-  const err = document.getElementById("taskError");
+  const taskInput = document.getElementById("taskInput");
+  const taskList = document.getElementById("taskList");
+  const taskError = document.getElementById("taskError");
   const count = document.getElementById("count");
   const empty = document.getElementById("empty");
-  let tasks = [];
-  try { tasks = JSON.parse(localStorage.getItem("tasks")) || []; } catch (e) { tasks = []; }
 
-  function save() {
-    try { localStorage.setItem("tasks", JSON.stringify(tasks)); } catch (e) { /* storage unavailable */ }
+  let tasks = [];
+
+  try {
+    tasks = JSON.parse(localStorage.getItem("study_tasks")) || [];
+  } catch (error) {
+    tasks = [];
   }
 
-  function render() {
-    list.innerHTML = "";
-    tasks.forEach(function (task) {
-      const li = document.createElement("li");
-      if (task.done) li.classList.add("done");
+  function saveTasks() {
+    localStorage.setItem("study_tasks", JSON.stringify(tasks));
+  }
 
-      const box = document.createElement("input");
-      box.type = "checkbox";
-      box.checked = task.done;
-      box.setAttribute("aria-label", "Mark completed: " + task.text);
-      box.addEventListener("change", function () { toggleTask(task.id); });
+  function renderTasks() {
+    taskList.innerHTML = "";
+
+    tasks.forEach(function (task) {
+      const item = document.createElement("li");
+      if (task.done) item.classList.add("done");
+
+      const left = document.createElement("div");
+      left.className = "task-left";
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = task.done;
+      checkbox.setAttribute("aria-label", "Mark task as complete: " + task.text);
+      checkbox.addEventListener("change", function () {
+        toggleTask(task.id);
+      });
 
       const text = document.createElement("span");
-      text.className = "text";
+      text.className = "task-text";
       text.textContent = task.text;
 
-      const del = document.createElement("button");
-      del.type = "button";
-      del.className = "del";
-      del.textContent = "Delete";
-      del.setAttribute("aria-label", "Delete task: " + task.text);
-      del.addEventListener("click", function () { deleteTask(task.id); });
+      const delBtn = document.createElement("button");
+      delBtn.type = "button";
+      delBtn.className = "del";
+      delBtn.textContent = "Delete";
+      delBtn.setAttribute("aria-label", "Delete task: " + task.text);
+      delBtn.addEventListener("click", function () {
+        deleteTask(task.id);
+      });
 
-      li.append(box, text, del);
-      list.appendChild(li);
+      left.appendChild(checkbox);
+      left.appendChild(text);
+      item.appendChild(left);
+      item.appendChild(delBtn);
+      taskList.appendChild(item);
     });
-    const done = tasks.filter(function (t) { return t.done; }).length;
-    count.textContent = tasks.length ? done + " of " + tasks.length + " tasks completed" : "";
+
+    const completed = tasks.filter(function (task) {
+      return task.done;
+    }).length;
+
+    count.textContent = tasks.length ? completed + " of " + tasks.length + " tasks completed" : "";
     empty.hidden = tasks.length > 0;
   }
 
-  function addTask(text) { tasks.push({ id: Date.now(), text: text, done: false }); save(); render(); }
-  function toggleTask(id) {
-    tasks = tasks.map(function (t) { return t.id === id ? { id: t.id, text: t.text, done: !t.done } : t; });
-    save(); render();
+  function addTask(text) {
+    tasks.push({ id: Date.now(), text: text, done: false });
+    saveTasks();
+    renderTasks();
   }
-  function deleteTask(id) { tasks = tasks.filter(function (t) { return t.id !== id; }); save(); render(); }
 
-  taskForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const value = input.value.trim();
-    if (!value) { err.textContent = "Type a task before adding it."; input.focus(); return; }
-    err.textContent = "";
+  function toggleTask(id) {
+    tasks = tasks.map(function (task) {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    });
+    saveTasks();
+    renderTasks();
+  }
+
+  function deleteTask(id) {
+    tasks = tasks.filter(function (task) {
+      return task.id !== id;
+    });
+    saveTasks();
+    renderTasks();
+  }
+
+  taskForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const value = taskInput.value.trim();
+
+    if (!value) {
+      taskError.textContent = "Type a task before adding it.";
+      taskInput.focus();
+      return;
+    }
+
+    taskError.textContent = "";
     addTask(value);
-    input.value = "";
-    input.focus();
+    taskInput.value = "";
+    taskInput.focus();
   });
-  render();
+
+  renderTasks();
 }
 
-// ---- Contact form validation ----
-const form = document.getElementById("contactForm");
-if (form) {
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
   const status = document.getElementById("formStatus");
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const digitsOnly = /^[0-9]+$/;
 
-  function setError(id, message) {
-    document.getElementById(id + "Error").textContent = message;
-    document.getElementById(id).classList.toggle("invalid", message !== "");
+  function setError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const error = document.getElementById(fieldId + "Error");
+
+    if (field) field.classList.toggle("invalid", message !== "");
+    if (error) error.textContent = message;
     return message === "";
   }
 
-  function validate() {
-    const v = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      message: form.message.value.trim()
+  function validateForm() {
+    const formData = {
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      phone: contactForm.phone.value.trim(),
+      message: contactForm.message.value.trim()
     };
+
     let ok = true;
-    ok = setError("name", v.name ? "" : "Enter your name.") && ok;
-    ok = setError("email", !v.email ? "Enter your email address." : (emailPattern.test(v.email) ? "" : "Enter a valid email, like name@example.com.")) && ok;
-    ok = setError("phone", !v.phone ? "Enter your phone number." : (digitsOnly.test(v.phone) ? "" : "Use digits only, with no spaces or symbols.")) && ok;
-    ok = setError("message", v.message ? "" : "Write a message.") && ok;
+    ok = setError("name", formData.name ? "" : "Enter your name.") && ok;
+    ok = setError("email", !formData.email ? "Enter your email address." : (emailPattern.test(formData.email) ? "" : "Enter a valid email address.")) && ok;
+    ok = setError("phone", !formData.phone ? "Enter your phone number." : (digitsOnly.test(formData.phone) ? "" : "Use digits only, with no spaces or symbols.")) && ok;
+    ok = setError("message", formData.message ? "" : "Write a message.") && ok;
+
     return ok;
   }
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    status.textContent = "";
-    if (validate()) {
-      status.textContent = "Message sent. Thank you for reaching out.";
-      form.reset();
+  contactForm.addEventListener("submit", function (event) {
+    if (!validateForm()) {
+      event.preventDefault();
+      return;
     }
+
+    status.textContent = "Sending your message...";
   });
-  ["name", "email", "phone", "message"].forEach(function (id) {
-    document.getElementById(id).addEventListener("input", function () { setError(id, ""); });
+
+  ["name", "email", "phone", "message"].forEach(function (fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+      field.addEventListener("input", function () {
+        setError(fieldId, "");
+      });
+    }
   });
 }
