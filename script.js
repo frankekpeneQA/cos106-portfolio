@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded',()=>{
-  if(location.pathname.endsWith('index.html')||location.pathname.endsWith('/')){
-    const main=document.querySelector('main');
-    const section=document.createElement('section');
-    section.className='section multimedia-section';
-    section.innerHTML='<div class="container"><div class="content-grid"><article class="card"><div class="eyebrow">Multimedia journal</div><h2>A small study break</h2><p>Good software work needs focus and balance. This local audio element demonstrates the multimedia requirement for my COS 106 portfolio.</p><audio controls preload="metadata" style="width:100%;display:block" aria-label="Short study break audio"><source src="media/study-tone.wav" type="audio/wav">Your browser does not support HTML audio.</audio></article><aside class="notice"><strong>My personal motto:</strong> Quality is not an accident. It comes from curiosity, careful testing, learning from mistakes and improving every day.</aside></div></div>';
-    main.append(section);
-  }
   document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
   const taskForm=document.getElementById('task-form');
   if(taskForm){
