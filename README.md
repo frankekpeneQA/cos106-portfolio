@@ -5,7 +5,7 @@ A responsive, multi-page student portfolio for COS 106 – Introduction to Web T
 ## Pages
 - `index.html` — homepage and introduction
 - `about.html` — education, career aspirations, skills and interests
-- `projects.html` — three sample QA practice projects and a testing workflow table
+- `projects.html` — three sample QA practice projects, QA evidence (test case, bug report and API response screenshot), and a testing workflow table
 - `planner.html` — interactive task planner (localStorage)
 - `contact.html` — contact details and client-side form validation
 
