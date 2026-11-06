@@ -1,41 +1,80 @@
-# HELLO I AM FRANK EKARA
-## Junior Software QA Engineer Portfolio
+# Hello, I'm Frank Ekara
 
-A portfolio website showcasing QA work, testing skills, bug reporting, automation, and performance testing.
+## Junior Software QA Engineer
 
-## My Miva journey
-My Miva journey has been a meaningful step in my growth as a software quality professional. Through this experience, I have developed a stronger understanding of testing principles, problem-solving, and the value of building reliable digital products. Miva has helped me sharpen my curiosity, improve my attention to detail, and deepen my passion for QA and software quality.
+Welcome to my Miva journey—a portfolio documenting my growth as a Software Engineering student at Miva Open University and my developing passion for Quality Assurance (QA), software testing, and building reliable digital products.
 
-## About this project
-This project presents Frank Ekara's QA career profile, including:
-- Manual and functional testing
-- Regression and exploratory testing
-- API testing with Postman
+I am learning how software is designed, developed, and tested. I enjoy exploring applications, checking how features behave, writing test cases, identifying defects, and finding ways to improve the user experience.
+
+I am a Junior Software QA Engineer with hands-on experience designing and executing 150+ test cases, identifying and reporting 20 defects, and creating QA documentation, including test plans, test cases, bug reports, and test summary reports.
+
+## QA Highlights
+
+- Designed and executed 150+ test cases
+- Identified and reported 20 defects
+- Created test plans, test cases, bug reports, and test summary reports
+- Performed functional, regression, and exploratory testing
+- Executed performance testing using K6
+- Worked in Agile Scrum environments
+
+## Skills
+
+- Manual testing
+- Test case design
+- Bug reporting
 - Cypress automation
-- K6 performance testing
-- Test planning and bug reporting
-- Agile Scrum collaboration
+- Performance testing
+- SDLC/STLC
+- Jira
 
-## Pages
+## Tools and Technologies
+
+- Postman
+- Git and GitHub
+- Chrome DevTools
+- VS Code
+- Cypress
+- K6
+
+## Current Focus
+
+- Building expertise in manual and automation testing
+- Expanding my Cypress automation skills
+- Learning API testing and performance testing
+- Seeking QA internship and entry-level QA opportunities
+
+## Featured Projects
+
+- [QA Portfolio](projects.html)
+- [Performance Testing](projects.html)
+
+## Certifications
+
+- Software Testing — QualityTechies
+- Software Internship Certificate — Techify India Limited
+- API Testing with Postman
+
+## Connect With Me
+
+- Email: [frankekpene0@gmail.com](mailto:frankekpene0@gmail.com)
+
+## About This Project
+
+This portfolio showcases my QA work, testing skills, bug reporting, automation, and performance testing. It includes:
+
 - `index.html` — landing page and summary
-- `about.html` — QA profile, tools, certifications
+- `about.html` — QA profile, tools, and certifications
 - `projects.html` — featured QA projects and evidence
 - `contact.html` — contact form and communication details
 
-## Skills and tools
-- **Testing:** Manual, functional, regression, exploratory, API, and performance testing
-- **Automation:** Cypress
-- **API testing:** Postman
-- **Performance testing:** K6
-- **Workflow:** Test planning, test cases, bug reports, and Agile Scrum
-- **Other tools:** Jira, Git, GitHub, Chrome DevTools, and VS Code
-
 ## Technologies
+
 HTML, CSS, and vanilla JavaScript.
 
-## Run locally
+## Run Locally
+
 Open `index.html` in a browser or launch the folder with Live Server in VS Code.
 
-## Notes
-- This project is a personal portfolio and learning showcase.
-- The contact form is client-side only and does not send real messages.
+## Note
+
+This project is a personal portfolio and learning showcase. The contact form is client-side only and does not send real messages.
