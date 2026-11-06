@@ -1,6 +1,10 @@
-# Junior Software QA Engineer Portfolio
+# HELLO I AM FRANK EKARA
+## Junior Software QA Engineer Portfolio
 
 A portfolio website showcasing QA work, testing skills, bug reporting, automation, and performance testing.
+
+## My Miva journey
+My Miva journey has been a meaningful step in my growth as a software quality professional. Through this experience, I have developed a stronger understanding of testing principles, problem-solving, and the value of building reliable digital products. Miva has helped me sharpen my curiosity, improve my attention to detail, and deepen my passion for QA and software quality.
 
 ## About this project
 This project presents Frank Ekara's QA career profile, including:
