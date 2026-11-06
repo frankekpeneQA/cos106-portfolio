@@ -6,6 +6,7 @@ A portfolio website showcasing QA work, testing skills, bug reporting, automatio
 This project presents Frank Ekara's QA career profile, including:
 - Manual and functional testing
 - Regression and exploratory testing
+- API testing with Postman
 - Cypress automation
 - K6 performance testing
 - Test planning and bug reporting
@@ -16,6 +17,14 @@ This project presents Frank Ekara's QA career profile, including:
 - `about.html` — QA profile, tools, certifications
 - `projects.html` — featured QA projects and evidence
 - `contact.html` — contact form and communication details
+
+## Skills and tools
+- **Testing:** Manual, functional, regression, exploratory, API, and performance testing
+- **Automation:** Cypress
+- **API testing:** Postman
+- **Performance testing:** K6
+- **Workflow:** Test planning, test cases, bug reports, and Agile Scrum
+- **Other tools:** Jira, Git, GitHub, Chrome DevTools, and VS Code
 
 ## Technologies
 HTML, CSS, and vanilla JavaScript.
